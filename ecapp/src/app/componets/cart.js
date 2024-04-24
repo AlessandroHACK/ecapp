@@ -16,7 +16,7 @@ const Cart = ({ cartItems }) => {
   };
 
   const handleVerCarrito = () => {
-    router.push('/carrito'); // Redirige a la página del carrito
+    router.push('/carrito'); 
   };
 
  
