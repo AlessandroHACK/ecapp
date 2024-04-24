@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { FaTrash, FaShoppingCart, FaCreditCard } from 'react-icons/fa';
-
+import Header from '../componets/header';
 const Carrito = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
@@ -47,7 +47,11 @@ const Carrito = () => {
   };
 
   return (
+    <div>
+      <Header/>
+  
     <div className="container mx-auto mt-10 p-5">
+       
       <div className="flex flex-col items-center">
         <FaShoppingCart className="text-6xl text-purple-500 mb-4" />
         <h1 className="text-4xl font-bold text-gray-700 mb-6">Tu Carrito</h1>
@@ -101,6 +105,7 @@ const Carrito = () => {
           ¡Compra realizada con éxito!
         </div>
       )}
+    </div>
     </div>
   );
 };
