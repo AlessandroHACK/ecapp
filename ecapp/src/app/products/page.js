@@ -13,7 +13,7 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://ecnextapp.test/wp-json/wp/v2/products?acf_format=standard');
+        const response = await axios.get('https://teqnake.nyc.dom.my.id/wp-json/wp/v2/products?acf_format=standard');
         setProducts(response.data);
         setFilteredProducts(response.data);
       } catch (error) {

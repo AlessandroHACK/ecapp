@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://ecnextapp.test/wp-json/wp/v2/blogs?acf_format=standard');
+        const response = await axios.get('https://teqnake.nyc.dom.my.id/wp-json/wp/v2/blogs?acf_format=standard');
         setBlogs(response.data);
       } catch (error) {
         console.error('Error fetching blogs:', error);
