@@ -19,13 +19,18 @@ const Cart = ({ cartItems }) => {
     router.push('/carrito'); 
   };
 
- 
   const total = cartItems.reduce((acc, item) => acc + parseFloat(item.acf.price), 0);
+  const numProductos = cartItems.length; // Contador de productos
 
   return (
     <div className="fixed top-1/4 right-6 transform -translate-y-1/2 z-50">
       <div className="w-12 h-12 bg-pink-500 rounded-full flex justify-center items-center cursor-pointer shadow-lg transition duration-300 ease-in-out hover:bg-pink-600" onClick={handleToggleLista}>
         {mostrarLista ? <FaTimes color="white" size={24} /> : <FaShoppingCart color="white" size={24} />}
+        {numProductos > 0 && ( // Mostrar el contador solo si hay productos en el carrito
+          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-6 h-6 flex justify-center items-center text-xs font-semibold">
+            {numProductos}
+          </span>
+        )}
       </div>
       {mostrarLista && (
         <div className="absolute top-full right-0 mt-2 bg-gray-100 rounded-lg shadow-lg p-4 w-64 transition duration-300 ease-in-out" style={{ maxHeight: '400px', overflowY: 'auto' }}>
