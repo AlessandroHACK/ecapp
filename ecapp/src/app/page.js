@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Header from "./componets/header";
 import BlogCard from "./componets/BlogCard";
-
+import Footer from "./componets/footer";
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
 
@@ -30,7 +30,7 @@ export default function Home() {
           ))}
         </div>
       </main>
-      
+      <Footer/>
     </div>
   );
 }

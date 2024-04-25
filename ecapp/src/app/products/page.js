@@ -4,6 +4,7 @@ import axios from 'axios';
 import Card from '../componets/card';
 import SearchBar from '../componets/searchBar';
 import Cart from '../componets/cart';
+import Footer from '../componets/footer';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -60,6 +61,7 @@ const Products = () => {
       <div className="mt-8">
         <Cart cartItems={cartItems} />
       </div>
+      <Footer/>
     </div>
   );
 };

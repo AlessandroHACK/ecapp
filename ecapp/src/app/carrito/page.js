@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaTrash, FaShoppingCart, FaCreditCard } from 'react-icons/fa';
 import Header from '../componets/header';
+
 const Carrito = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
@@ -106,6 +107,7 @@ const Carrito = () => {
         </div>
       )}
     </div>
+
     </div>
   );
 };
